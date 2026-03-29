@@ -426,49 +426,38 @@
     #why { padding: 100px 0; background: var(--black); }
     .why-inner {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: center;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 56px; align-items: start;
     }
     .why-visual-box {
-      background: var(--steel);
+      background: linear-gradient(135deg, #23252b 0%, #17191d 100%);
+      border: 1px solid rgba(255,255,255,0.06);
       aspect-ratio: 4/3;
-      border-radius: 4px;
-      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative; overflow: hidden;
+      padding: 40px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
     .why-visual-box::before {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(201,146,26,0.06) 0%, transparent 60%);
+      background: 
+        radial-gradient(circle at bottom right, rgba(201,146,26,0.18) 0%, transparent 28%),
+        linear-gradient(135deg, rgba(201,146,26,0.05) 0%, transparent 60%);
+      pointer-events: none;
     }
     /* Real logo displayed large in the box */
     .why-visual-box img {
-      width: 75%;
-      height: 75%;
+      width: 82%;
+      max-width: 420px;
+      height: auto;
       object-fit: contain;
       position: relative;
       z-index: 1;
-    }
-    .why-badge {
-      position: absolute;
-      bottom: -18px; right: -18px;
-      background: var(--gold);
-      color: var(--black);
-      width: 118px; height: 118px;
-      border-radius: 50%;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center;
-      box-shadow: 0 8px 32px rgba(201,146,26,0.45);
-    }
-    .why-badge-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 30px; font-weight: 900; line-height: 1;
-    }
-    .why-badge-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 10px; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.2;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
     }
     .why-list { margin-top: 36px; display: flex; flex-direction: column; }
     .why-item {
@@ -898,10 +887,6 @@
     <div>
       <div class="why-visual-box">
         <img src="ironhawk-logo.png" alt="Iron Hawk Trailer Rentals" />
-        <div class="why-badge">
-          <div class="why-badge-num">100%</div>
-          <div class="why-badge-label">Locally<br>Owned</div>
-        </div>
       </div>
     </div>
 
